@@ -1,0 +1,82 @@
+---
+import Form from "./Form.astro"
+---
+
+<div class="bg-[url('/img/investment-expert.webp')] bg-cover bg-bottom bg-no-repeat bg-blend-overlay bg-black bg-opacity-50">
+    <div class="grid lg:grid-cols-3 grid-cols-1">
+        <div class="col-span-2 lg:p-20 p-10">
+            <h1 class="text-white lg:text-6xl text-3xl">
+                Investment<span class="text-gradient">.Expert</span>
+            </h1>
+           <div class="bg-white my-5 rounded-xl p-5">
+            <p class="text-black text-lg"><span class="text-[rgb(var(--accent))] font-bold">Investment makes your money grow.</span> With high inflation, a good investment is required to retain the value of money and make a profit. </p>
+            <p class="text-black text-lg">Our experts will guide you regarding your investments in various fields like:- </p>
+            <div>
+                <div class="grid lg:grid-cols-3 gap-4 text-black text-[rgb(var(--accent))] font-bold my-5">
+                    <a href="/" target="_blank" rel="noopener noreferrer">
+                        <div class="text-white text-color p-3 rounded-full text-lg">
+                            <p>Equity &rarr;</p>
+                        </div>
+                    </a>
+                    <a href="/" target="_blank" rel="noopener noreferrer">
+                        <div class="text-white text-color p-3 rounded-full text-lg">
+                            <p>Mutual funds &rarr;</p>
+                        </div>
+                    </a>
+                    <a href="/" target="_blank" rel="noopener noreferrer">
+                        <div class="text-white text-color p-3 rounded-full text-lg">
+                            <p>SIPs &rarr;</p>
+                        </div>
+                    </a>
+                    <a href="/" target="_blank" rel="noopener noreferrer">
+                        <div class="text-white text-color p-3 rounded-full text-lg">
+                            <p>Real Estate  &rarr;</p>
+                        </div>
+                    </a>
+                    <a href="/" target="_blank" rel="noopener noreferrer">
+                        <div class="text-white text-color p-3 rounded-full text-lg">
+                            <p>Fixed Deposits  &rarr;</p>
+                        </div>
+                    </a>
+                    <a href="/" target="_blank" rel="noopener noreferrer">
+                        <div class="text-white text-color p-3 rounded-full text-lg">
+                            <p>Cryptocurrencies  &rarr;</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+           </div>
+            <div class="bg-white rounded-full text-center lg:w-80 py-2 mt-3">
+                <a class="text-[rgb(var(--accent))] font-bold" href="">Get Quotes from Our Experts</a>
+            </div>
+        </div>
+        <div class="py-5 pr-5">
+            <Form />
+        </div>
+    </div>
+</div>
+
+<style>
+    h1 {
+        
+        font-weight: 700;
+        line-height: 1;
+        text-align: Left;
+    }
+    .text-gradient {
+        background-image: var(--accent-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 400%;
+        background-position: 0%;
+    }
+    .text-color{
+		font-size: 1rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		background-image: var(--accent-gradient);
+		background-size: 600%;
+		background-position: 0%;
+	} 
+</style>

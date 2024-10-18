@@ -1,0 +1,180 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import Slider from '../components/Slider.astro';
+import Heading from '../components/Heading.astro';
+import BlogCard from '../components/BlogCard.astro';
+---
+
+<Layout title="Investment Experts">
+	<main>
+		<Slider/>
+		<div class="py-20">
+			<Heading title1="Real-Estate Projects for" title2="Investments" />
+			<ul role="list" class="link-card-grid my-10">
+				<Card
+					href="https://docs.astro.build/"
+					category="Commercial"
+					title="JC World"
+					image='img/jc-world.webp'
+					point1='Developer: Jaypee Greens'
+					point2='Completion date: Dec 2018'
+					point3='Starting price: 13000 per sqft'
+					point4='Brokerage: No brokerage/Discounted unit'
+					point5='Unit type: Shops, Retail shops, Fine dining restaurant'
+				/>
+				<Card
+					href="https://astro.build/integrations/"
+					category="Commercial"
+					title="Trehan Iris Broadway greno West"
+					image='img/trehan-iris-broadway-greno-west.webp'
+					point1='Developer: Trehan Builder'
+					point2='Completion date: Q2 2026'
+					point3='Starting price: 18000 per sqft'
+					point4='Brokerage: No brokerage/Discounted unit'
+					point5='Unit type: Shops, Anchor shops, Food court, Office spaces'
+				/>
+				<Card
+					href="https://astro.build/themes/"
+					category="Commercial"
+					title="Trehan Iris Skyhigh"
+					image='img/trehan-iris-skyhigh.webp'
+					point1='Developer: Trehan builders'
+					point2='Completion date: Update Soon'
+					point3='Starting price: Update Soon'
+					point4='Brokerage: No brokerage/Discounted unit'
+					point5='Unit type: Office spaces'
+				/>
+				<Card
+					href="https://astro.build/chat/"
+					category="Commercial"
+					title="Top Builder(NH 24)"
+					image='img/investment-expert.webp'
+					point1='Developer: Prestige Group'
+					point2='Completion date: Update Soon'
+					point3='Starting price: Update Soon'
+					point4='Brokerage: No brokerage/Discounted unit'
+					point5='Unit type: Update Soon'
+				/>
+				<Card
+					href="https://astro.build/chat/"
+					category="Residencial"
+					title="Gaur NYC Residences"
+					image='img/Gaur-GYC.webp'
+					point1='Developer: Gaur Sons'
+					point2='Completion date: Q3 2029'
+					point3='Starting price: 2.5 Cr'
+					point4='Brokerage: No brokerage/Discounted unit'
+					point5='Unit type: 4BHK luxury apartments'
+				/>
+				<Card
+					href="https://astro.build/chat/"
+					category="Residential"
+					title="Irish Platinum"
+					image='img/irish-platinum.webp'
+					point1='Developer: Irish Infrastructure'
+					point2='Completion date: Q1 2029'
+					point3='Starting price: 10,500 per sqft'
+					point4='Brokerage: No brokerage/Discounted unit'
+					point5='Unit type: 3BHK-4BHK luxury apartments'
+				/>
+			</ul>
+		</div>
+		<div class="py-20">
+			<Heading title1="Investments" title2="Blogs" />
+			<div class="mt-10 grid lg:grid-cols-3 gap-4">
+				<BlogCard
+					href="/"
+					category="Finance"
+					title="Why Early Retirement Planning is Essential in India for Financial Security"
+					image='img/jc-world.webp'
+					description='Retirement planning in this era is important for individuals working in either government or private sector.'
+				/>
+				<BlogCard
+					href="/"
+					category="Real Estate"
+					title="Why Investing in Real Estate is a great hedge against recession and inflation?"
+					image='img/jc-world.webp'
+					description='Recent times have been full of uncertainty. Certain epidemics and pandemics hitting the world such as Covid, Ebola, and Monkeypox.'
+				/>
+				<BlogCard
+					href="/"
+					category="Finance"
+					title="Why Having a Personal Health Insurance is Crucial - Even with Group Coverage"
+					image='img/jc-world.webp'
+					description='A health insurance policy is a policy which requires only an annual fee and covers all hospital charges and related treatment expenses.'
+				/>
+			</div>
+		</div>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: auto;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	.astro-a {
+		position: absolute;
+		top: -32px;
+		left: 50%;
+		transform: translatex(-50%);
+		width: 220px;
+		height: auto;
+		z-index: -1;
+	}
+	h1 {
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.instructions {
+		margin-bottom: 2rem;
+		border: 1px solid rgba(var(--accent-light), 25%);
+		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+		padding: 1.5rem;
+		border-radius: 8px;
+	}
+	.instructions code {
+		font-size: 0.8em;
+		font-weight: bold;
+		background: rgba(var(--accent-light), 12%);
+		color: rgb(var(--accent-light));
+		border-radius: 4px;
+		padding: 0.3em 0.4em;
+	}
+	.instructions strong {
+		color: rgb(var(--accent-light));
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(48ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+	}
+
+	@media (max-width: 900px){
+		.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+	}
+	}
+
+	
+</style>

@@ -1,0 +1,75 @@
+---
+interface Props {
+	title: string;
+	category: string;
+	href: string;
+	image?: string;
+	point1: string;
+	point2: string;
+	point3: string;
+	point4: string;
+	point5: string;
+}
+
+const { href, title, category, image, point1, point2, point3, point4, point5 } = Astro.props;
+---
+
+<li class="link-card">
+	<a href={href}>
+		<img src={image} alt={title} width="100%">
+		<h2 class="mt-3">
+			{title}
+			<span>&rarr;</span>
+		</h2>
+		<p class="text-sm italic text-[rgb(145,73,235)]">
+			{category}
+		</p>
+		<ul class="list-disc ml-5">
+			<li>{point1}</li>
+			<li>{point2}</li>
+			<li>{point3}</li>
+			<li>{point4}</li>
+			<li>{point5}</li>
+		</ul>
+	</a>
+</li>
+<style>
+	.link-card {
+		list-style: none;
+		display: flex;
+		padding: 1px;
+		background-color: #23262d;
+		background-image: none;
+		background-size: 400%;
+		border-radius: 7px;
+		background-position: 100%;
+		transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+		box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+	}
+	.link-card > a {
+		width: 100%;
+		text-decoration: none;
+		line-height: 1.4;
+		padding: calc(1.5rem - 1px);
+		border-radius: 8px;
+		color: white;
+		background-color: #23262d;
+		opacity: 0.8;
+	}
+	h2 {
+		
+		font-size: 1.5rem;
+		transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+	}
+	p {
+		margin-top: 0.5rem;
+		margin-bottom: 0;
+	}
+	.link-card:is(:hover, :focus-within) {
+		background-position: 0;
+		background-image: var(--accent-gradient);
+	}
+	.link-card:is(:hover, :focus-within) h2 {
+		color: rgb(var(--accent-light));
+	}
+</style>
